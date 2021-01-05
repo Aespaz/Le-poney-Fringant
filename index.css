@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Cagliostro&display=swap');
+@media only screen and (max-width:500px) {
+    #logoAPF{
+        position: relative;
+        height: 500px;
+        width: 500px;
+        left: 200px;
+    }
+    #TitreLogo{
+        position: relative;
+        color: #966200;
+        margin-top: 100px;
+        margin-left: -60px;
+        font-size: 30px;
+
+    }
+
+
+  }
+#logoAPF{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    
+}
+
+#TitreLogo {
+    position: relative;
+    left: 200px;
+    top: -100px;
+    
+}
+.text{
+    font-family: 'Cagliostro',sans-serif;
+}
