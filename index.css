@@ -1,35 +1,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Cagliostro&display=swap');
-@media only screen and (max-width:500px) {
+*{
+    overflow-X: hidden;
+}
+@media (max-width:500px) {
+    
     #logoAPF{
         position: relative;
-        height: 500px;
-        width: 500px;
-        left: 200px;
+        height: 150px;
+        width: 150px;
+        left: 170px;
     }
     #TitreLogo{
         position: relative;
         color: #966200;
-        margin-top: 100px;
-        margin-left: -60px;
+        padding-top: 110px;
+        margin-left: -10px;
         font-size: 30px;
-
+    }
+    .PageLink{
+        position: relative;
+        text-decoration: none;
+        top: -150px;
+        left: 17px;
+        font-size: 20px;
+        color: black;
+    }
+    #accueilLink{
+        position: relative;
+        text-decoration: none;
+        top: -150px;
+        left: 17px;
+        font-size: 20px;
+        color: black;
+    }
+    #StatistiquesLink{
+        position: relative;
+        text-decoration: none;
+        top: -150px;
+        left: 17px;
+        font-size: 20px;
+        color: black;
+    }
+    #NembresLink{
+        position: relative;
+        text-decoration: none;
+        top: -150px;
+        left: 17px;
+        font-size: 20px;
+        color: black;
+    }
+    #SeconnecterLink{
+        position: relative;
+        text-decoration: underline #966200 solid;
+        top: -150px;
+        left: 17px;
+        font-size: 20px;
+        color: black;
+    
+    }
+    #seConnecterTitre{
+        position: relative;
+        font-weight: 100;
+        margin-left: -400px;
+        margin-top: -40px;
     }
 
+}
 
-  }
 #logoAPF{
     position: relative;
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
+
     
 }
 
 #TitreLogo {
     position: relative;
-    left: 200px;
-    top: -100px;
+    left: 150px;
+    top: -150px;
+    font-size: 30px;
+    font-weight: 100;
     
 }
 .text{
     font-family: 'Cagliostro',sans-serif;
 }
+.color{
+    color: #966200;
+}
+.PageLink{
+    position:relative;
+    text-decoration: none;
+    top: -230px;
+    left: 800px;
+    font-size: 20px;
+    color: black;
+    margin-left: 20px;
+    
+
+}
+#SeconnecterLink{
+    
+}
+#seConnecterTitre{
+    position: relative;
+    
+    font-weight: 100;
+    left: 500px;
+    top: -50px;
+}
+  
