@@ -15,7 +15,7 @@
                  <a href="" class="text PageLink" id="SeconnecterLink" title="lien Se connecter">Se connecter</a>
 </header>
 <body>
-    <h2 class="text color" id="seConnecterTitre" title="Titre se connecter">Inscription</h2> 
+    <h2 class="text color" id="InscriptionTitre" title="Titre se connecter">Inscription</h2> 
     
     <p class="text" id="txtPseudo">Pseudo:</p>
     <input type="form" placeholder="Entrée votre Pseudo" class="text" id="formPseudo">
@@ -24,12 +24,18 @@
 
     <p class="text" id="txtMail">Adresse Mail:</p>
     <input type="form" placeholder="Entrée votre adresse mail" class="text" id="formMail">
+    
 
     <p class="text" id="txtMDP">Mot de passe:</p>
     <input type="form" placeholder="Entré votre mot de passe" class="text" id="formMDP">
 
-    <p class="text" id="txtMDP">vos centre d'intérêt:(Choisissez aux minimum 3)</p>
-    <select name="CentreIntérêt" id="CentreIntérêt">
+    <p class="text" id="txtNT">Numéro de <br>
+        téléphone:</p>
+    <input type="tel"  placeholder="Numéro de téléphone" class="text" id="formNT">
+
+    <p class="text" id="textCI">vos centre d'intérêt: (Choisissez aux minimum 3)</p>
+    <div id="listeCI" class="text">
+    <select name="CentreIntérêt" id="CentreIntérêt" class="listeD">
         <option value="">Choisissez un centre intérêt</option>
         <option value="Sport">Sport</option>
         <option value="Musique">Musique</option>
@@ -54,7 +60,7 @@
         <option value="Taxidermie">Taxidermie</option>
         <option value="Philatélie">Philatélie</option>
     </select>
-    <select name="CentreIntérêt" id="CentreIntérêt2">
+    <select name="CentreIntérêt" id="CentreIntérêt2" class="listeD">
     <option value="">Choisissez un centre intérêt</option>
         <option value="Sport">Sport</option>
         <option value="Musique">Musique</option>
@@ -79,7 +85,7 @@
         <option value="Taxidermie">Taxidermie</option>
         <option value="Philatélie">Philatélie</option>
     </select>
-    <select name="CentreIntérêt" id="CentreIntérêt3">
+    <select name="CentreIntérêt" id="CentreIntérêt3" class="listeD">
     <option value="">Choisissez un centre intérêt</option>
         <option value="Sport">Sport</option>
         <option value="Musique">Musique</option>
@@ -104,7 +110,7 @@
         <option value="Taxidermie">Taxidermie</option>
         <option value="Philatélie">Philatélie</option>
     </select>
-    <select name="CentreIntérêt" id="CentreIntérêt4">
+    <select name="CentreIntérêt" id="CentreIntérêt4" class="listeD">
     <option value="">Choisissez un centre intérêt</option>
         <option value="Sport">Sport</option>
         <option value="Musique">Musique</option>
@@ -129,7 +135,7 @@
         <option value="Taxidermie">Taxidermie</option>
         <option value="Philatélie">Philatélie</option>
     </select>
-    <select name="CentreIntérêt" id="CentreIntérêt5">
+    <select name="CentreIntérêt" id="CentreIntérêt5" class="listeD">
     <option value="">Choisissez un centre intérêt</option>
         <option value="Sport">Sport</option>
         <option value="Musique">Musique</option>
@@ -154,7 +160,7 @@
         <option value="Taxidermie">Taxidermie</option>
         <option value="Philatélie">Philatélie</option>
     </select>
-    <select name="CentreIntérêt" id="CentreIntérêt6">
+    <select name="CentreIntérêt" id="CentreIntérêt6" class="listeD">
     <option value="">Choisissez un centre intérêt</option>
         <option value="Sport">Sport</option>
         <option value="Musique">Musique</option>
@@ -179,7 +185,7 @@
         <option value="Taxidermie">Taxidermie</option>
         <option value="Philatélie">Philatélie</option>
     </select>
-    <select name="CentreIntérêt" id="CentreIntérêt7">
+    <select name="CentreIntérêt" id="CentreIntérêt7" class="listeD">
     <option value="">Choisissez un centre intérêt</option>
         <option value="Sport">Sport</option>
         <option value="Musique">Musique</option>
@@ -205,7 +211,7 @@
         <option value="Philatélie">Philatélie</option>
 
     </select>
-    <select name="CentreIntérêt" id="CentreIntérêt8">
+    <select name="CentreIntérêt" id="CentreIntérêt8" class="listeD">
     <option value="">Choisissez un centre intérêt</option>
     <option value="Sport">Sport</option>
     <option value="Musique">Musique</option>
@@ -230,8 +236,8 @@
     <option value="Taxidermie">Taxidermie</option>
     <option value="Philatélie">Philatélie</option>
 </select>
+</div>
 
-
-    <a href="" class="text" id="SinscrireLink" title="lien pour s'inscrire">S'inscrire</a>
+    <a href="index.html" class="text" id="SeconnecteLink" title="lien pour se connecter">Se connecter</a>
 </body>
 </html>

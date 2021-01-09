@@ -68,31 +68,31 @@ body{
     #txtMail{
         position: relative;
         margin-top: -0px;
-        margin-left: -330px;
+        margin-left: -450px;
     }
     #txtNA{
         position: relative;
-        top: 30px;
-        margin-left: -310px;
+        top: 0px;
+        margin-left: -410px;
     }
     #formMail{
         position: relative;
-        margin-top: 20px;
+        margin-top: 0px;
         width: 160px;
-        margin-left: -320px;
+        margin-left: -420px;
         
     }
     #txtMDP{
         position: relative;
         top: -20px;
         width: 160px;
-        margin-left: -330px;
+        margin-left: -455px;
     }
     #formMDP{
         position: relative;
         top: -70px;
         width: 160px;
-        margin-left: -320px;
+        margin-left: -420px;
     }
     #SinscrireLink{
         position: relative;
@@ -100,7 +100,12 @@ body{
         padding-bottom: 30px;
         text-decoration: none;
         color: black;
-        margin-left: -60px;
+        margin-left: -30px;
+    }
+    #SoumettreButton{
+        position: relative;
+        top: -1px;
+        margin-left: -30px;
     }
 }
 #logoAPF{
@@ -140,36 +145,36 @@ body{
     #seConnecterTitre{
         position: relative;
         font-weight: 100;
-        left: 500px;
+        left: 600px;
         top: -100px;
     }
     #txtMail{
         position: relative;
-        left: 400px;
+        left: 500px;
         font-size: 15px;
     }
     #txtNA{
         position: relative;
-        left: 520px;
+        left: 640px;
        
     }
     #formMail{
         position: relative;
         top: -40px;
         width: 160px;
-        left: 530px;
+        left: 630px;
         
     
     }
     #txtMDP{
         position: relative;
-        left: 400px;
+        left: 500px;
         top: -20px;
 
     }
     #formMDP{
         position: relative;
-        left: 530px;
+        left: 630px;
         top: -60px;
         width: 160px;
        
@@ -177,6 +182,19 @@ body{
     #SinscrireLink{
         position: relative;
         text-decoration: none;
-        left: 500px;
+        left: 250px;
+        padding-bottom: 100px;
+        color: black;
+    }
+    #SoumettreButton{
+        position: relative;
+        top: -1px;
+        left: 560px;
+        height: 40px;
+        width: 100px;
+        border-radius: 5px;
+        background-color: #966200;
+        color: white;
+        box-shadow: 30px;
     }
   

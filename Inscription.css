@@ -59,7 +59,7 @@ body{
         color: black;
     
     }
-    #seConnecterTitre{
+    #InscriptionTitre{
         position: absolute;
         font-weight: 100;
         margin-left: -470px;
@@ -68,31 +68,29 @@ body{
     #txtMail{
         position: relative;
         margin-top: -0px;
-        margin-left: -330px;
+        margin-left: -440px;
     }
     #txtNA{
         position: relative;
-        top: 30px;
-        margin-left: -310px;
+        margin-left: -430px;
     }
     #formMail{
         position: relative;
-        margin-top: 20px;
         width: 160px;
-        margin-left: -320px;
+        margin-left: -420px;
         
     }
     #txtMDP{
         position: relative;
         top: -20px;
         width: 160px;
-        margin-left: -330px;
+        margin-left: -445px;
     }
     #formMDP{
         position: relative;
         top: -70px;
         width: 160px;
-        margin-left: -320px;
+        margin-left: -420px;
     }
     #SinscrireLink{
         position: relative;
@@ -102,6 +100,46 @@ body{
         color: black;
         margin-left: -60px;
     }
+    #formPseudo{
+        position: relative;
+        margin-left: -420px;
+        top: -40px;
+        width: 160px;
+    }
+    #txtPseudo{
+        position: relative;
+        margin-left: -440px;
+    }
+    #listeCI{
+        position:relative;
+        margin-left: -350px;
+    }
+    #formNT{
+        position: relative;
+        margin-left: -420px;
+        top: -40px;
+        width: 200px
+    }
+    #txtNT{
+        position: relative;
+        margin-left: -430px;
+    }
+    #textCI{
+        position: relative;
+        padding-right: -100px;
+        margin-left: -430px;
+        
+    }
+    #listeCI{
+        position: relative;
+        margin-left: -430px;
+    }
+    #SeconnecteLink{
+        position: relative;
+        margin-top: 20px;
+        margin-left: -400px;
+    }
+    
 }
 #logoAPF{
     position: relative;
@@ -137,39 +175,39 @@ body{
     #SeconnecterLink{
         text-decoration: underline #966200 solid;
     }
-    #seConnecterTitre{
+    #InscriptionTitre{
         position: relative;
         font-weight: 100;
-        left: 500px;
+        left: 600px;
         top: -100px;
     }
     #txtMail{
         position: relative;
-        left: 400px;
+        left: 500px;
         font-size: 15px;
     }
     #txtNA{
         position: relative;
-        left: 520px;
+        left: 640px;
        
     }
     #formMail{
         position: relative;
         top: -40px;
         width: 160px;
-        left: 530px;
+        left: 630px;
         
     
     }
     #txtMDP{
         position: relative;
-        left: 400px;
+        left: 500px;
         top: -20px;
 
     }
     #formMDP{
         position: relative;
-        left: 530px;
+        left: 630px;
         top: -60px;
         width: 160px;
        
@@ -179,4 +217,48 @@ body{
         text-decoration: none;
         left: 500px;
     }
-  
+    #txtPseudo{
+        position: relative;
+        left: 530px;
+    }
+    #formPseudo{
+        position: relative;
+        left: 630px;
+        top: -40px;
+        width: 160px;
+    }
+    #listeCI{
+        position: relative;
+        width: 500px;
+        left: 400px;
+        font-family: 'Cagliostro',sans-serif;
+    
+    }
+    #SeconnecteLink{
+        position: relative;
+        text-decoration: none;
+        left: 700px;
+        padding-bottom: 200px;
+    }
+    .listeD{
+        position: relative;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        left: 70px;
+    }
+    #txtNT{
+        position: relative;
+        left: 500px;
+    }
+    #formNT{
+        position: relative;
+        left: 630px;
+        top: -40px;
+        width: 160px;
+    }
+    #textCI{
+        position: relative;
+        left: 500px;
+
+    }
