@@ -155,29 +155,34 @@ body{
     }
     #txtNA{
         position: relative;
-        left: 640px;
+        left: 540px;
        
     }
     #formMail{
         position: relative;
-        top: -40px;
+        top: 0px;
         width: 160px;
-        left: 630px;
+        left: 530px;
         
     
     }
     #txtMDP{
         position: relative;
         left: 500px;
-        top: -20px;
+        top: 0px;
 
     }
     #formMDP{
         position: relative;
-        left: 630px;
-        top: -60px;
+        left: 530px;
+        top: -20px;
         width: 160px;
        
+    }
+    #formContainer{
+        position: relative;
+        height: 50px;
+        width: 50px;
     }
     #SinscrireLink{
         position: relative;

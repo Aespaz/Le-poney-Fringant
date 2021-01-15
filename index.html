@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="index.js" defer></script>
     <title>Associantion Du poney Fringant</title>
 </head>
+<body>
 <header>
    <img class="logo" id="logoAPF" src="image/mustang-295456_1280.png" alt="logo de l'association du poney Fringant">
         <h1 class="text color" id="TitreLogo">Association Le <br>
@@ -14,21 +17,31 @@
                  <a href="" class="text PageLink" id="NembresLink" title="lien Nembres">Membres</a>
                  <a href="" class="text PageLink" id="SeconnecterLink" title="lien Se connecter">Se connecter</a>
 </header>
-<body>
+
+<div id="app">
     <h2 class="text color" id="seConnecterTitre" title="Titre se connecter">Se connecter</h2>
 
-    <p class="text" id="txtNA">ou Numéro d'adhérent(Optionnel)</p> 
+    <form v-if="connected === false">
 
-    <p class="text" id="txtMail">Adresse Mail:</p>
-    <input type="form" placeholder="Entré votre adresse mail" class="text" id="formMail">
+        <label for="email" >email</label>
+        <input v-model="email" type="text" name="email">
+        <br>
 
-    <p class="text" id="txtMDP">Mot de passe:</p>
-    <input type="form" placeholder="Entré votre mot de passe" class="text" id="formMDP">
+        <label for="password">password</label>
+        <input v-model="password" type="password" name="password">
+        <br>
 
-    <button v-on:click="submit" type="button" value="Soumettre" class="text" id="SoumettreButton">
-
+        <button v-on:click="submitForm">Go</button>
+    </form>
+    <div v-else>
+        Hello {{ email }}
+        <p>
+            <button @click="disconnect">Se déconnecter</button>
+            
+        </p>
+    </div>
+</div>
     <a href="Inscription.html" class="text" id="SinscrireLink" title="lien pour s'inscrire">S'inscrire</a>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script href="index.js"></script>
+    
 </body>
-</html>
+</html> 

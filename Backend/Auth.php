@@ -7,7 +7,7 @@ if (isset($_POST['email'])) {
 }
 if (isset($_POST['password'])){
     $password = $_POST['password'];
-
+}
 
 $req = "SELECT pseudo, email, password FROM utilisateurs WHERE email = :email LIMIT 1";//req qui vas aller chercher le mot de passe dans la table utilisateurs pour 1 mail.
 
@@ -42,7 +42,7 @@ try {
         http_response_code(401); // Non autorisé
         echo json_encode(["connected" => false]);
      }
-  
-}
+    
+
 
     ?>

@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="Inscription.css">
+    <script src="index.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>Associantion Du poney Fringant</title>
 </head>
+<body>
 <header>
+    
    <img class="logo" id="logoAPF" src="image/mustang-295456_1280.png" alt="logo de l'association du poney Fringant">
         <h1 class="text color" id="TitreLogo">Association Le <br>
              poney Fringant</h1>
@@ -14,229 +18,105 @@
                  <a href="" class="text PageLink" id="NembresLink" title="lien Nembres">Membres</a>
                  <a href="" class="text PageLink" id="SeconnecterLink" title="lien Se connecter">Se connecter</a>
 </header>
-<body>
-    <h2 class="text color" id="InscriptionTitre" title="Titre se connecter">Inscription</h2> 
-    
-    <p class="text" id="txtPseudo">Pseudo:</p>
-    <input type="form" placeholder="Entrée votre Pseudo" class="text" id="formPseudo">
+<div id="app">
+<form v-if="connected === false">
 
-    <p class="text" id="txtNA">ou Numéro d'adhérent(Optionnel)</p> 
+    <label for="pseudo" >pseudo</label>
+    <input v-model="pseudo" type="text" name="pseudo">
+    <br>
 
-    <p class="text" id="txtMail">Adresse Mail:</p>
-    <input type="form" placeholder="Entrée votre adresse mail" class="text" id="formMail">
-    
+    <label for="prenom" >prénom</label>
+    <input v-model="prenom" type="text" name="prenom">
+    <br>
 
-    <p class="text" id="txtMDP">Mot de passe:</p>
-    <input type="form" placeholder="Entré votre mot de passe" class="text" id="formMDP">
+    <label for="mail" >email</label>
+    <input v-model="mail" type="text/email" name="mail">
+    <br>
 
-    <p class="text" id="txtNT">Numéro de <br>
-        téléphone:</p>
-    <input type="tel"  placeholder="Numéro de téléphone" class="text" id="formNT">
+    <label for="passeword">password</label>
+    <input v-model="passeword" type="password" name="passeword">
+    <br>
 
-    <p class="text" id="textCI">vos centre d'intérêt: (Choisissez aux minimum 3)</p>
-    <div id="listeCI" class="text">
-    <select name="CentreIntérêt" id="CentreIntérêt" class="listeD">
-        <option value="">Choisissez un centre intérêt</option>
-        <option value="Sport">Sport</option>
-        <option value="Musique">Musique</option>
-        <option value="Jeux vidéos">Jeux vidéos</option>
-        <option value="Lecture">Lecture</option>
-        <option value="Informatique">Informatique</option>
-        <option value="Sorties">Sorties</option>
-        <option value="Cuisine">Cuisine</option>
-        <option value="Aviation">Aviation</option>
-        <option value="Mécanique">Mécanique</option>
-        <option value="Licornes">Licornes</option>
-        <option value="Joaillerie">Joaillerie</option>
-        <option value="Agriculture">Agriculture</option>
-        <option value="Cinéma">Cinéma</option>
-        <option value="Politique">Politique</option>
-        <option value="Couture">Couture</option>
-        <option value="Animaux">Animaux</option>
-        <option value="Science">Science</option>
-        <option value="Histoire">Histoire</option>
-        <option value="SVT">SVT</option>
-        <option value="Physique-Chimie">Physique-Chimie</option>
-        <option value="Taxidermie">Taxidermie</option>
-        <option value="Philatélie">Philatélie</option>
-    </select>
-    <select name="CentreIntérêt" id="CentreIntérêt2" class="listeD">
-    <option value="">Choisissez un centre intérêt</option>
-        <option value="Sport">Sport</option>
-        <option value="Musique">Musique</option>
-        <option value="Jeux vidéos">Jeux vidéos</option>
-        <option value="Lecture">Lecture</option>
-        <option value="Informatique">Informatique</option>
-        <option value="Sorties">Sorties</option>
-        <option value="Cuisine">Cuisine</option>
-        <option value="Aviation">Aviation</option>
-        <option value="Mécanique">Mécanique</option>
-        <option value="Licornes">Licornes</option>
-        <option value="Joaillerie">Joaillerie</option>
-        <option value="Agriculture">Agriculture</option>
-        <option value="Cinéma">Cinéma</option>
-        <option value="Politique">Politique</option>
-        <option value="Couture">Couture</option>
-        <option value="Animaux">Animaux</option>
-        <option value="Science">Science</option>
-        <option value="Histoire">Histoire</option>
-        <option value="SVT">SVT</option>
-        <option value="Physique-Chimie">Physique-Chimie</option>
-        <option value="Taxidermie">Taxidermie</option>
-        <option value="Philatélie">Philatélie</option>
-    </select>
-    <select name="CentreIntérêt" id="CentreIntérêt3" class="listeD">
-    <option value="">Choisissez un centre intérêt</option>
-        <option value="Sport">Sport</option>
-        <option value="Musique">Musique</option>
-        <option value="Jeux vidéos">Jeux vidéos</option>
-        <option value="Lecture">Lecture</option>
-        <option value="Informatique">Informatique</option>
-        <option value="Sorties">Sorties</option>
-        <option value="Cuisine">Cuisine</option>
-        <option value="Aviation">Aviation</option>
-        <option value="Mécanique">Mécanique</option>
-        <option value="Licornes">Licornes</option>
-        <option value="Joaillerie">Joaillerie</option>
-        <option value="Agriculture">Agriculture</option>
-        <option value="Cinéma">Cinéma</option>
-        <option value="Politique">Politique</option>
-        <option value="Couture">Couture</option>
-        <option value="Animaux">Animaux</option>
-        <option value="Science">Science</option>
-        <option value="Histoire">Histoire</option>
-        <option value="SVT">SVT</option>
-        <option value="Physique-Chimie">Physique-Chimie</option>
-        <option value="Taxidermie">Taxidermie</option>
-        <option value="Philatélie">Philatélie</option>
-    </select>
-    <select name="CentreIntérêt" id="CentreIntérêt4" class="listeD">
-    <option value="">Choisissez un centre intérêt</option>
-        <option value="Sport">Sport</option>
-        <option value="Musique">Musique</option>
-        <option value="Jeux vidéos">Jeux vidéos</option>
-        <option value="Lecture">Lecture</option>
-        <option value="Informatique">Informatique</option>
-        <option value="Sorties">Sorties</option>
-        <option value="Cuisine">Cuisine</option>
-        <option value="Aviation">Aviation</option>
-        <option value="Mécanique">Mécanique</option>
-        <option value="Licornes">Licornes</option>
-        <option value="Joaillerie">Joaillerie</option>
-        <option value="Agriculture">Agriculture</option>
-        <option value="Cinéma">Cinéma</option>
-        <option value="Politique">Politique</option>
-        <option value="Couture">Couture</option>
-        <option value="Animaux">Animaux</option>
-        <option value="Science">Science</option>
-        <option value="Histoire">Histoire</option>
-        <option value="SVT">SVT</option>
-        <option value="Physique-Chimie">Physique-Chimie</option>
-        <option value="Taxidermie">Taxidermie</option>
-        <option value="Philatélie">Philatélie</option>
-    </select>
-    <select name="CentreIntérêt" id="CentreIntérêt5" class="listeD">
-    <option value="">Choisissez un centre intérêt</option>
-        <option value="Sport">Sport</option>
-        <option value="Musique">Musique</option>
-        <option value="Jeux vidéos">Jeux vidéos</option>
-        <option value="Lecture">Lecture</option>
-        <option value="Informatique">Informatique</option>
-        <option value="Sorties">Sorties</option>
-        <option value="Cuisine">Cuisine</option>
-        <option value="Aviation">Aviation</option>
-        <option value="Mécanique">Mécanique</option>
-        <option value="Licornes">Licornes</option>
-        <option value="Joaillerie">Joaillerie</option>
-        <option value="Agriculture">Agriculture</option>
-        <option value="Cinéma">Cinéma</option>
-        <option value="Politique">Politique</option>
-        <option value="Couture">Couture</option>
-        <option value="Animaux">Animaux</option>
-        <option value="Science">Science</option>
-        <option value="Histoire">Histoire</option>
-        <option value="SVT">SVT</option>
-        <option value="Physique-Chimie">Physique-Chimie</option>
-        <option value="Taxidermie">Taxidermie</option>
-        <option value="Philatélie">Philatélie</option>
-    </select>
-    <select name="CentreIntérêt" id="CentreIntérêt6" class="listeD">
-    <option value="">Choisissez un centre intérêt</option>
-        <option value="Sport">Sport</option>
-        <option value="Musique">Musique</option>
-        <option value="Jeux vidéos">Jeux vidéos</option>
-        <option value="Lecture">Lecture</option>
-        <option value="Informatique">Informatique</option>
-        <option value="Sorties">Sorties</option>
-        <option value="Cuisine">Cuisine</option>
-        <option value="Aviation">Aviation</option>
-        <option value="Mécanique">Mécanique</option>
-        <option value="Licornes">Licornes</option>
-        <option value="Joaillerie">Joaillerie</option>
-        <option value="Agriculture">Agriculture</option>
-        <option value="Cinéma">Cinéma</option>
-        <option value="Politique">Politique</option>
-        <option value="Couture">Couture</option>
-        <option value="Animaux">Animaux</option>
-        <option value="Science">Science</option>
-        <option value="Histoire">Histoire</option>
-        <option value="SVT">SVT</option>
-        <option value="Physique-Chimie">Physique-Chimie</option>
-        <option value="Taxidermie">Taxidermie</option>
-        <option value="Philatélie">Philatélie</option>
-    </select>
-    <select name="CentreIntérêt" id="CentreIntérêt7" class="listeD">
-    <option value="">Choisissez un centre intérêt</option>
-        <option value="Sport">Sport</option>
-        <option value="Musique">Musique</option>
-        <option value="Jeux vidéos">Jeux vidéos</option>
-        <option value="Lecture">Lecture</option>
-        <option value="Informatique">Informatique</option>
-        <option value="Sorties">Sorties</option>
-        <option value="Cuisine">Cuisine</option>
-        <option value="Aviation">Aviation</option>
-        <option value="Mécanique">Mécanique</option>
-        <option value="Licornes">Licornes</option>
-        <option value="Joaillerie">Joaillerie</option>
-        <option value="Agriculture">Agriculture</option>
-        <option value="Cinéma">Cinéma</option>
-        <option value="Politique">Politique</option>
-        <option value="Couture">Couture</option>
-        <option value="Animaux">Animaux</option>
-        <option value="Science">Science</option>
-        <option value="Histoire">Histoire</option>
-        <option value="SVT">SVT</option>
-        <option value="Physique-Chimie">Physique-Chimie</option>
-        <option value="Taxidermie">Taxidermie</option>
-        <option value="Philatélie">Philatélie</option>
-
-    </select>
-    <select name="CentreIntérêt" id="CentreIntérêt8" class="listeD">
-    <option value="">Choisissez un centre intérêt</option>
-    <option value="Sport">Sport</option>
-    <option value="Musique">Musique</option>
-    <option value="Jeux vidéos">Jeux vidéos</option>
-    <option value="Lecture">Lecture</option>
-    <option value="Informatique">Informatique</option>
-    <option value="Sorties">Sorties</option>
-    <option value="Cuisine">Cuisine</option>
-    <option value="Aviation">Aviation</option>
-    <option value="Mécanique">Mécanique</option>
-    <option value="Licornes">Licornes</option>
-    <option value="Joaillerie">Joaillerie</option>
-    <option value="Agriculture">Agriculture</option>
-    <option value="Cinéma">Cinéma</option>
-    <option value="Politique">Politique</option>
-    <option value="Couture">Couture</option>
-    <option value="Animaux">Animaux</option>
-    <option value="Science">Science</option>
-    <option value="Histoire">Histoire</option>
-    <option value="SVT">SVT</option>
-    <option value="Physique-Chimie">Physique-Chimie</option>
-    <option value="Taxidermie">Taxidermie</option>
-    <option value="Philatélie">Philatélie</option>
-</select>
+    <button v-on:click="submitRegister">Go</button>
+</form>
+<div v-else>
+    Hello {{ mail }}
+    <p>
+        <button @click="disconnect">Se déconnecter</button>
+        
+    </p>
 </div>
+</div>
+    <h2 class="text color" id="InscriptionTitre" title="Titre se connecter">Inscription</h2> 
+
+    <p class="text" id="textCI">vos centre d'intérêt: (Choisissez aux minimum 3)</p><!--input type checkbox a mettre c'est mieux-->
+    <div id="listeCI" class="text">
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
+        <label for="Musique">Musique</label>
+        <input type="checkbox" name="Musique" id="checkMusique">
+
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
+        <label for="Sport">Sport</label>
+        <input type="checkbox" name="Sport" id="checkSport">
+
 
     <a href="index.html" class="text" id="SeconnecteLink" title="lien pour se connecter">Se connecter</a>
 </body>
