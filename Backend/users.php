@@ -1,7 +1,6 @@
 <?php
-    $users =  
-    [ 
-       'aymeric@localhost.com' => 'Goodenought' 
-    ];
+$mdp = 'aymeric';
+echo md5($mdp);
+
 
     
