@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="Inscription.css">
     <script src="index.js" defer></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <title>Associantion Du poney Fringant</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Association Du poney Fringant</title>
 </head>
 <body>
 <header>
@@ -16,38 +16,60 @@
                  <a href="" class="text PageLink" id="accueilLink" title="lien Accueil">Accueil</a>
                  <a href="" class="text PageLink" id="StatistiquesLink" title="lien Statistiques">Statistiques</a>
                  <a href="" class="text PageLink" id="NembresLink" title="lien Nembres">Membres</a>
-                 <a href="" class="text PageLink" id="SeconnecterLink" title="lien Se connecter">Se connecter</a>
+                 <a href="index.html" class="text PageLink" id="SeconnecterLink" title="lien Se connecter">Se connecter</a>
 </header>
+<h2 class="text color" id="InscriptionTitre" title="Titre se connecter">Inscription</h2> 
 <div id="app">
 <form v-if="connected === false">
 
-    <label for="pseudo" >pseudo</label>
-    <input v-model="pseudo" type="text" name="pseudo">
+    <label for="pseudo" id="txtPseudo" class="text">Pseudo</label>
+    <input v-model="pseudo" type="text" name="pseudo" id="formPseudo">
     <br>
 
-    <label for="prenom" >prénom</label>
-    <input v-model="prenom" type="text" name="prenom">
+    <label for="prenom" id="txtPrenom" class="text">Prénom</label>
+    <input v-model="prenom" type="text" name="prenom" id="formPrenom">
     <br>
 
-    <label for="mail" >email</label>
-    <input v-model="mail" type="text/email" name="mail">
+    <label for="nom" id="txtNom" class="text">Nom</label>
+    <input v-model="nom" type="text" name="nom" id="formNom">
     <br>
 
-    <label for="passeword">password</label>
-    <input v-model="passeword" type="password" name="passeword">
+
+    <label for="mail" id="txtMail" class="text">Email</label>
+    <input v-model="mail" type="text/email" name="mail" id="formMail">
     <br>
 
-    <button v-on:click="submitRegister">Go</button>
-</form>
-<div v-else>
-    Hello {{ mail }}
+    <label for="numero" id="txtNum" class="text">Numéro</label>
+    <input v-model="numero" type="text" name="numero" id="formNum">
+    <br>
+
+    <label for="adresse" id="txtAdresse" class="text">Adresse</label>
+    <input v-model="adresse" type="text" name="adresse" id="formAdresse">
+    <br>
+
+    <label for="cp" id="txtCP" class="text">Code postal</label>
+    <input v-model="cp" type="text" name="cp" id="formCP">
+    <br>
+
+
+    <label for="ville" id="txtVille" class="text">Ville</label>
+    <input v-model="ville" type="text" name="ville" id="formVille">
+    <br>
+
+    <label for="passeword" id="txtMDP" class="text">Mot de passe</label>
+    <input v-model="passeword" type="password" name="passeword" id="formMDP">
+    <br>
+  <button v-on:click="submitRegister" class="text">Soumettre</button>
+</form>  
+        <div v-else>
+                Hello {{ mail }}
     <p>
-        <button @click="disconnect">Se déconnecter</button>
+        <button @click="disconnect"class="text">Se déconnecter</button>
         
-    </p>
-</div>
-</div>
-    <h2 class="text color" id="InscriptionTitre" title="Titre se connecter">Inscription</h2> 
+     </p>
+    </div>
+
+  </div>
 
     <p class="text" id="textCI">vos centre d'intérêt: (Choisissez aux minimum 3)</p><!--input type checkbox a mettre c'est mieux-->
     <div id="listeCI" class="text">
@@ -57,67 +79,68 @@
         <label for="Musique">Musique</label>
         <input type="checkbox" name="Musique" id="checkMusique">
 
-        <label for="Sport">Sport</label>
-        <input type="checkbox" name="Sport" id="checkSport">
+        <label for="JV">jeux vidéos</label>
+        <input type="checkbox" name="JV" id="checkJV">
 
-        <label for="Sport">Sport</label>
-        <input type="checkbox" name="Sport" id="checkSport">
+        <label for="Lecture">Lecture</label>
+        <input type="checkbox" name="Lecture" id="checkLecture">
 
-        <label for="Sport">Sport</label>
-        <input type="checkbox" name="Sport" id="checkSport">
+        <label for="Informatique">Informatique</label>
+        <input type="checkbox" name="Informatique" id="checkInformatique">
 
-        <label for="Sport">Sport</label>
-        <input type="checkbox" name="Sport" id="checkSport">
+        <label for="Sorties">Sorties</label>
+        <input type="checkbox" name="Sorties" id="checkSorties">
 
-        <label for="Sport">Sport</label>
-        <input type="checkbox" name="Sport" id="checkSport">
+        <label for="Cuisine">Cuisine</label>
+        <input type="checkbox" name="Cuisine" id="checkCuisine">
 
-        <label for="Sport">Sport</label>
-        <input type="checkbox" name="Sport" id="checkSport">
+        <label for="Aviation">Aviation</label>
+        <input type="checkbox" name="Aviation" id="checkAviation">
 
-        <label for="Sport">Sport</label>
-        <input type="checkbox" name="Sport" id="checkSport">
+        <label for="Mecanique">Mécanique</label>
+        <input type="checkbox" name="Mecanique" id="checkMecanique">
 
-        <label for="Sport">Sport</label>
-        <input type="checkbox" name="Sport" id="checkSport">
+        <label for="Licornes">Licornes</label>
+        <input type="checkbox" name="Licornes" id="checkLicornes">
 
-        <label for="Sport">Sport</label>
-        <input type="checkbox" name="Sport" id="checkSport">
+        <label for="Joaillerie">Joaillerie</label>
+        <input type="checkbox" name="Joaillerie" id="checkJoaillerie">
 
-        <label for="Sport">Sport</label>
-        <input type="checkbox" name="Sport" id="checkSport">
+        <label for="Agriculture">Agriculture</label>
+        <input type="checkbox" name="Agriculture" id="checkAgriculture">
 
-        <label for="Sport">Sport</label>
-        <input type="checkbox" name="Sport" id="checkSport">
+        <label for="Cinema">Cinéma</label>
+        <input type="checkbox" name="Cinema" id="checkCinema">
 
-        <label for="Sport">Sport</label>
-        <input type="checkbox" name="Sport" id="checkSport">
+        <label for="Politique">Politique</label>
+        <input type="checkbox" name="Politique" id="checkPolitique">
 
-        <label for="Sport">Sport</label>
-        <input type="checkbox" name="Sport" id="checkSport">
+        <label for="Couture">Couture</label>
+        <input type="checkbox" name="Couture" id="checkCouture">
 
-        <label for="Sport">Sport</label>
-        <input type="checkbox" name="Sport" id="checkSport">
+        <label for="Animaux">Animaux</label>
+        <input type="checkbox" name="Animaux" id="checkAnimaux">
 
-        <label for="Sport">Sport</label>
-        <input type="checkbox" name="Sport" id="checkSport">
+        <label for="Science">Science</label>
+        <input type="checkbox" name="Science" id="checkScience">
 
-        <label for="Sport">Sport</label>
-        <input type="checkbox" name="Sport" id="checkSport">
+        <label for="Histoire">Histoire</label>
+        <input type="checkbox" name="Histoire" id="checkHistoire">
 
-        <label for="Sport">Sport</label>
-        <input type="checkbox" name="Sport" id="checkSport">
+        <label for="SVT">SVT</label>
+        <input type="checkbox" name="SVT" id="checkSVT">
 
-        <label for="Sport">Sport</label>
-        <input type="checkbox" name="Sport" id="checkSport">
+        <label for="Physique-Chimie">Physique-Chimie</label>
+        <input type="checkbox" name="Physique-Chimie" id="checkPhysique-Chimie">
 
-        <label for="Sport">Sport</label>
-        <input type="checkbox" name="Sport" id="checkSport">
+        <label for="Taxidermie">Taxidermie</label>
+        <input type="checkbox" name="Taxidermie" id="checkTaxidermie">
 
-        <label for="Sport">Sport</label>
-        <input type="checkbox" name="Sport" id="checkSport">
+        <label for="Philatélie">Philatélie</label>
+        <input type="checkbox" name="Philatélie" id="checkPhilatélie">
 
 
-    <a href="index.html" class="text" id="SeconnecteLink" title="lien pour se connecter">Se connecter</a>
+
+<a href="index.html" class="text" id="SeconnecteLink" title="lien pour se connecter">Se connecter</a>
 </body>
 </html>

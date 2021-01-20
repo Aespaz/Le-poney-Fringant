@@ -102,13 +102,13 @@ body{
     }
     #formPseudo{
         position: relative;
-        margin-left: -420px;
+        margin-left: -620px;
         top: -40px;
         width: 160px;
     }
     #txtPseudo{
         position: relative;
-        margin-left: -440px;
+        margin-left: 440px;
     }
     #listeCI{
         position:relative;
@@ -183,7 +183,7 @@ body{
     }
     #txtMail{
         position: relative;
-        left: 500px;
+        left: 530px;
         font-size: 15px;
     }
     #txtNA{
@@ -193,22 +193,20 @@ body{
     }
     #formMail{
         position: relative;
-        top: -40px;
         width: 160px;
-        left: 630px;
+        left: 595px;
         
     
     }
     #txtMDP{
         position: relative;
-        left: 500px;
-        top: -20px;
+        left: 530px;
+
 
     }
     #formMDP{
         position: relative;
-        left: 630px;
-        top: -60px;
+        left: 542px;
         width: 160px;
        
     }
@@ -219,12 +217,13 @@ body{
     }
     #txtPseudo{
         position: relative;
+        top: 0px;
         left: 530px;
     }
     #formPseudo{
         position: relative;
-        left: 630px;
-        top: -40px;
+        left: 580px;
+        top: 0px;
         width: 160px;
     }
     #listeCI{
@@ -237,7 +236,8 @@ body{
     #SeconnecteLink{
         position: relative;
         text-decoration: none;
-        left: 700px;
+        top: 80px;
+        left: 0px;
         padding-bottom: 200px;
     }
     .listeD{
@@ -261,4 +261,75 @@ body{
         position: relative;
         left: 500px;
 
+    }
+    #txtPrenom{
+        position: relative;
+        top: 0px;
+        left: 530px;
+    }
+    #formPrenom{
+        position: relative;
+        left: 577px;
+        top: 0px;
+        width: 160px;
+    }
+    #txtNum{
+        position: relative;
+        top: 0px;
+        left: 530px;
+    }
+    #formNum{
+        position: relative;
+        left: 574px;
+        top: 0px;
+        width: 160px;
+    }
+    #txtAdresse{
+        position: relative;
+        top: 0px;
+        left: 530px;
+    }
+    #formAdresse{
+        position: relative;
+        left: 577px;
+        top: 0px;
+        width: 160px;
+    }
+    #txtCP{
+        position: relative;
+        top: 0px;
+        left: 530px;
+    }
+    #formCP{
+        position: relative;
+        left: 548px;
+        top: 0px;
+        width: 160px;
+    }
+    #txtNom{
+        position: relative;
+        top: 0px;
+        left: 530px;
+    }
+    #formNom{
+        position: relative;
+        left: 595px;
+        top: 0px;
+        width: 160px;
+    }
+    #txtVille{
+        position: relative;
+        top: 0px;
+        left: 530px;
+    }
+    #formVille{
+        position: relative;
+        left: 600px;
+        top: 0px;
+        width: 160px;
+    }
+    #buttonSubmit{
+        position: relative;
+        top: 50px;
+        left: 300px;
     }

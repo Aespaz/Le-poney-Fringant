@@ -42,13 +42,14 @@ body{
         font-size: 20px;
         color: black;
     }
-    #NembresLink{
+    #MembresLink{
         position: relative;
         text-decoration: none;
         top: -150px;
         left: 17px;
         font-size: 20px;
         color: black;
+    
     }
     #SeconnecterLink{
         position: relative;
@@ -115,6 +116,9 @@ body{
 
     
 }
+#MembresLink{
+    text-decoration:  underline #966200 solid;
+}
 
 #TitreLogo {
     position: relative;
@@ -139,14 +143,19 @@ body{
     color: black;
     margin-left: 20px;
     }
-    #SeconnecterLink{
-        text-decoration: underline #966200 solid;
-    }
+/* #SeconnecterLink{
+       
+    }*/
     #bienvenue{
         position: relative;
         font-weight: 100;
         left: 600px;
         top: -100px;
+    }
+    #titreMembres{
+        position: relative;
+        left:500px;
+        top:-150px;
     }
     #txtMail{
         position: relative;

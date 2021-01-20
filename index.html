@@ -5,17 +5,17 @@
     <link rel="stylesheet" href="index.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="index.js" defer></script>
-    <title>Associantion Du poney Fringant</title>
+    <title>Association Du poney Fringant</title>
 </head>
 <body>
 <header>
    <img class="logo" id="logoAPF" src="image/mustang-295456_1280.png" alt="logo de l'association du poney Fringant">
         <h1 class="text color" id="TitreLogo">Association Le <br>
              poney Fringant</h1>
-                 <a href="" class="text PageLink" id="accueilLink" title="lien Accueil">Accueil</a>
-                 <a href="" class="text PageLink" id="StatistiquesLink" title="lien Statistiques">Statistiques</a>
-                 <a href="" class="text PageLink" id="NembresLink" title="lien Nembres">Membres</a>
-                 <a href="" class="text PageLink" id="SeconnecterLink" title="lien Se connecter">Se connecter</a>
+                 <a href="" class="text PageLink" id="accueilLink" title="lien Accueil">Accueil</a><!--lien pour l'accueil du site-->
+                 <a href="" class="text PageLink" id="StatistiquesLink" title="lien Statistiques">Statistiques</a><!--lien pour la page des statistiques des différents centre d'intéréts-->
+                 <a href="membres.html" class="text PageLink" id="NembresLink" title="lien Nembres">Membres</a><!--lien pour aller sur la page membre du site-->
+                 <a href="" class="text PageLink" id="SeconnecterLink" title="lien Se connecter">Se connecter</a><!--lien pour se connecter au site-->
 </header>
 
 <div id="app">
@@ -23,25 +23,27 @@
 
     <form v-if="connected === false">
 
-        <label for="email" >email</label>
-        <input v-model="email" type="text" name="email">
+        <label for="email" id="txtMail" class="text">Email</label><!--formulaire de connexion le label du mail-->
+        <input v-model="email" type="text" name="email" id="formMail"><!--formulaire de connexion le formulaire pour le mail-->
         <br>
 
-        <label for="password">password</label>
-        <input v-model="password" type="password" name="password">
+        <label for="password" id="txtMDP" class="text">Mot de passe</label><!--formulaire de connexion le label du mot de passe-->
+        <input v-model="password" type="password" name="password" id="formMDP"><!--formulaire de connexion le formulaire pour le mot de passe-->
         <br>
 
-        <button v-on:click="submitForm">Go</button>
+        <button v-on:click="submitForm" id="SoumettreButton" class="text">Soumettre</button><!--bouton de soumition qui repon a l'evenement dans le
+        index.js la methode submitForm-->
     </form>
     <div v-else>
-        Hello {{ email }}
+        Hello {{ email }}<!--affiche hello + le email une fois connecter-->
         <p>
-            <button @click="disconnect">Se déconnecter</button>
+            <button @click="disconnect">Se déconnecter</button><!--bouton se deconnecter qui vas agir en captant l'evenement du index.js 
+            avec la methode disconnect qui vas destroy la session-->
             
         </p>
     </div>
 </div>
-    <a href="Inscription.html" class="text" id="SinscrireLink" title="lien pour s'inscrire">S'inscrire</a>
+    <a href="Inscription.html" class="text" id="SinscrireLink" title="lien pour s'inscrire">S'inscrire</a><!--lien pour passé à la page d'inscription-->
     
 </body>
 </html> 

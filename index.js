@@ -3,12 +3,16 @@ let app = new Vue ({
         data: {
             connected:false, // ont définit nos attribut ici
             pseudo:null,
-
             prenom:null,
             email:null,
             mail:null,
             password:null,
-            passeword:null,  
+            passeword:null,
+            nom:null,  
+            numero:null,
+            adresse:null,
+            cp:null,
+            ville:null,
         },
         mounted: function () {
             fetch('http://localhost:7000/Backend/connected.php')
@@ -31,18 +35,34 @@ let app = new Vue ({
                       body: formParams
                   };
 
-                  fetch('http://localhost:7000/Backend/Auth.php', requestOptions)
+                  fetch('http://localhost:7000/Backend/Auth.php', requestOptions) 
                     .then(response => response.json())
-                    .then(data => (this.connected = data.connected));
+                    .then(data => {
+                        this.connected = data.connected;
+                        window.location = './membres.html';
+                        console.log('succes !');
+                    })
+                    .catch(error => {
+                        console.log('chat a pas marché :( cheh XD')
+                        console.error(error)
+                    });
+                    //.then(response => window.location=response.url)
+                   
+                    
               },
                 submitRegister(ev) {
                     ev.preventDefault();
-                  console.log("test");
+                  console.log("ça marche?");
                     let formParams = new URLSearchParams();
                     formParams.append("pseudo", this.pseudo);
                     formParams.append("prenom", this.prenom);
                     formParams.append("mail", this.mail);
                     formParams.append("passeword", this.passeword);
+                    formParams.append("nom", this.nom);
+                    formParams.append("adresse", this.adresse);
+                    formParams.append("numero", this.numero);
+                    formParams.append("cp", this.cp);
+                    formParams.append("ville", this.ville);
   
                     const requestOptions = {
                         method: "POST",
@@ -56,6 +76,7 @@ let app = new Vue ({
                       .then(response => response.json())
                       .then(data => (this.connected = data.connected));
                 },
+                
               disconnect(ev) {
                 ev.preventDefault(); 
                 fetch('http://localhost:7000/Backend/disconnect.php')
@@ -64,6 +85,7 @@ let app = new Vue ({
                 this.connected = false; 
             }
           
-        }
+        },
+        
 })
     
