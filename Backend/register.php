@@ -7,7 +7,6 @@ if (isset($_POST['pseudo'])){
 }
 if (isset($_POST['prenom'])){
     $prenom = $_POST['prenom'];
-
 }
 if (isset($_POST['nom'])){
     $nom = $_POST['nom'];
@@ -44,7 +43,7 @@ $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//
 
 try {
     $statement = $connexion->prepare($requette);
-    $statement->bindParam(':mail', $mail);
+    $statement->bindParam(':mail', $mail);// lier le formulaire mail a la requette BDD
     $statement->bindParam(':pseudo', $pseudo);
     $statement->bindParam(':prenom', $prenom);
     $statement->bindParam(':nom', $nom);

@@ -1,7 +1,7 @@
-CREATE DATABASE IF NOT EXISTS LEPONEYFRINGANT;--Creation de la base
-USE LEPONEYFRINGANT;--utilisation de la base crée
+CREATE DATABASE IF NOT EXISTS LEPONEYFRINGANT;
+USE LEPONEYFRINGANT;
 
-CREATE USER IF NOT EXISTS poney@localhost IDENTIFIED BY 'fringant';--creation d'un utilisateur qui vas pouvoir avoir accés à la base
+CREATE USER IF NOT EXISTS poney@localhost IDENTIFIED BY 'fringant';
 GRANT ALL ON LEPONEYFRINGANT.* TO poney@localhost;
 
 CREATE TABLE IF NOT EXISTS utilisateurs (
@@ -15,7 +15,17 @@ CREATE TABLE IF NOT EXISTS utilisateurs (
     cp INT NOT NULL,
     ville VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP 
+);
 
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE IF NOT EXISTS profils (
+    profilID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    titre VARCHAR(255),
+    photo VARCHAR(255),
+    description TEXT
+);
+
+CREATE TABLE IF NOT EXISTS interets ( 
+    nom VARCHAR(255)
 );
 
