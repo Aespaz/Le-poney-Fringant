@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="membres.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="index.js" defer></script>
     <title>Page des Membres</title>
 </head>
 <body>
@@ -13,10 +15,21 @@
              poney Fringant</h1>
                  <a href="" class="text PageLink" id="accueilLink" title="lien Accueil">Accueil</a>
                  <a href="" class="text PageLink" id="StatistiquesLink" title="lien Statistiques">Statistiques</a>
-                 <a href="" class="text PageLink" id="MembresLink" title="lien Membres">Membres</a>
-                 <a href="index.html" class="text PageLink" id="SeconnecterLink" title="lien Se connecter">Se connecter</a>
+                 <a href="membres.html" class="text PageLink" id="MembresLink" title="lien Membres">Membres</a>
+                 <a href="" class="text PageLink" id="SeconnecterLink" title="lien Se connecter">Se connecter</a>
         </header>
-        <h2 id="titreMembres"> Listes des membres</h2>
+    <div id="app">
+        <div v-for="(value, index) in poney" :key = "index">
+    </div>
+            <button v-on:click="disconnect" id="DisconnectButton">Se déconnecter</button><!--bouton se deconnecter qui vas agir en captant l'evenement du index.js 
+            avec la methode disconnect qui vas destroy la session-->
+            
+        <h2 id="titreMembres" class="text color"> Listes des membres</h2>
+    <div v-for="(value, index) in poney" :key = "index" class="RectMembres text">
+        <p id="textRectMembres" class="color">{{ value.pseudo }} &nbsp /{{ value.prenom }}</p> <p id="created_at">{{ value.created_at }}</p>
+
+    </div>
+</div>
     
 
    

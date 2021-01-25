@@ -141,6 +141,10 @@ body{
     }
     #SeconnecterLink{
         text-decoration: underline #966200 solid;
+        
+    }
+    .hide{
+        display: none;
     }
     #seConnecterTitre{
         position: relative;

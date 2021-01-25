@@ -16,7 +16,7 @@ if (isset($_POST['mail'])){
     $mail = $_POST['mail'];
 }
 if (isset($_POST['passeword'])){
-    $passeword = $_POST['passeword'];
+    $passeword = PASSWORD_HASH($_POST['passeword'], PASSWORD_DEFAULT);
 }
 if (isset($_POST['numero'])){
     $numero = $_POST['numero'];
@@ -44,13 +44,13 @@ $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//
 try {
     $statement = $connexion->prepare($requette);
     $statement->bindParam(':mail', $mail);// lier le formulaire mail a la requette BDD
-    $statement->bindParam(':pseudo', $pseudo);
-    $statement->bindParam(':prenom', $prenom);
-    $statement->bindParam(':nom', $nom);
-    $statement->bindParam(':numero', $numero);
-    $statement->bindParam(':adresse', $adresse);
-    $statement->bindParam(':cp', $cp);
-    $statement->bindParam(':ville', $ville);
+    $statement->bindParam(':pseudo', $pseudo);// lier le formulaire pseudo a la requette BDD
+    $statement->bindParam(':prenom', $prenom);// lier le formulaire prenom a la requette BDD
+    $statement->bindParam(':nom', $nom);// lier le formulaire nom a la requette BDD
+    $statement->bindParam(':numero', $numero);// lier le formulaire tel pour le telephone a la requette BDD
+    $statement->bindParam(':adresse', $adresse);// lier le formulaire adreesse a la requette BDD
+    $statement->bindParam(':cp', $cp);// lier le formulaire du code postal a la requette BDD
+    $statement->bindParam(':ville', $ville);// lier le formulaire de la ville a la requette BDD
     $mot_de_passe = $statement->bindParam(':passeword', $passeword);
     password_hash($mot_de_passe, PASSWORD_DEFAULT);
     $statement->execute();

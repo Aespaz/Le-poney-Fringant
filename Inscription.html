@@ -39,7 +39,7 @@
     <input v-model="mail" type="text/email" name="mail" id="formMail">
     <br>
 
-    <label for="numero" id="txtNum" class="text">Numéro</label>
+    <label for="numero" id="txtNum" class="text">Tel</label><!--mettre Tel a la place de Numéro c'est mieux-->
     <input v-model="numero" type="text" name="numero" id="formNum">
     <br>
 
@@ -59,17 +59,8 @@
     <label for="passeword" id="txtMDP" class="text">Mot de passe</label>
     <input v-model="passeword" type="password" name="passeword" id="formMDP">
     <br>
-  <button v-on:click="submitRegister" class="text">Soumettre</button>
-</form>  
-        <div v-else>
-                Hello {{ mail }}
-    <p>
-        <button @click="disconnect"class="text">Se déconnecter</button>
-        
-     </p>
-    </div>
-
-  </div>
+ 
+  
 
     <p class="text" id="textCI">vos centre d'intérêt: (Choisissez aux minimum 3)</p><!--input type checkbox a mettre c'est mieux-->
     <div id="listeCI" class="text">
@@ -139,8 +130,9 @@
         <label for="Philatélie">Philatélie</label>
         <input type="checkbox" name="Philatélie" id="checkPhilatélie">
 
-
-
+        <button v-on:click="submitRegister" class="text" id="buttonSubmit">Soumettre</button>
+      </form> 
+</div>
 <a href="index.html" class="text" id="SeconnecteLink" title="lien pour se connecter">Se connecter</a>
 </body>
 </html>

@@ -9,6 +9,8 @@ if (isset($_POST['password'])){
     $password = $_POST['password'];//recuperation du contenu du formulaire mot de passe
 }
 
+
+ 
 $req = "SELECT pseudo, email, password FROM utilisateurs WHERE email = :email LIMIT 1";//req qui vas aller chercher le mot de passe dans la table utilisateurs pour 1 mail.
 
 
@@ -31,21 +33,19 @@ try {
 } catch(Exception $exception) {//attraper une exception de maniere a voir les erreurs 
         //echo $exception->getMessage();
     }
-    if($password == $passwordBdd) { //si le mot de passe saisie par l'utilisateur est égale au mot de passe de son addresse mail en basse de donné alors il se connecte
+    if(password_verify($password, $passwordBdd)) { //si le mot de passe saisie par l'utilisateur est égale au mot de passe de son addresse mail en basse de donné alors il se connecte
         session_start(); //demarage de la session ^^
-        $_SESSION['utilisateurs'] = $mail; 
-
-        http_response_code(200);// le code que tout le monde veut avoir ^^  
-       // header('location:../membres.html');
-        // header('Access-Control-Expose-Headers: Location');
        
+        $_SESSION['utilisateurs'] = $mail;        
+        http_response_code(200);// le code que tout le monde veut avoir ^^  
         echo json_encode(["connected" => true]);//ont est connecter cool XD
-       //exit();
     } else {
         http_response_code(401); // Non autorisé car le mot de passe n'est pas le même de celui qui est en BDD
         echo json_encode(["connected" => false]);//ont est pas connecter est ça recharge la page
      }
     
+
+
 
 
     ?>

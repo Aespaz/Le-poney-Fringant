@@ -13,11 +13,25 @@ let app = new Vue ({
             adresse:null,
             cp:null,
             ville:null,
+            poney:[]
+               
+            
+                    // crée un membres.php qui va etre pareille que le inscription mais avec un select 
+                    // et object mettre [pour faire aparaitre le pseudo]
+              
+        
+            
         },
         mounted: function () {
             fetch('http://localhost:7000/Backend/connected.php')
                 .then(response => response.json())
                 .then((data) => {this.connected = data.connected; this.email = data.email});
+                
+                document.getElementById('SeconnecterLink').classList.add('hide');
+            fetch('http://localhost:7000/Backend/membres.php')
+                .then(response => response.json())
+                .then((data) => {this.poney = data})
+               
           },
           methods: {
               submitForm(ev) {
@@ -26,7 +40,6 @@ let app = new Vue ({
                   let formParams = new URLSearchParams();
                   formParams.append("email", this.email);
                   formParams.append("password", this.password);
-                  
                   const requestOptions = {
                       method: "POST",
                       headers: {
@@ -37,15 +50,21 @@ let app = new Vue ({
 
                   fetch('http://localhost:7000/Backend/Auth.php', requestOptions) 
                     .then(response => response.json())
-                    .then(data => {
+                  
+                       .then(data => {
                         this.connected = data.connected;
                         window.location = './membres.html';
-                        console.log('succes !');
+                        console.log('succes !'); 
                     })
                     .catch(error => {
                         console.log('chat a pas marché :( cheh XD')
                         console.error(error)
                     });
+                
+                    
+                   
+                    
+                    
                     //.then(response => window.location=response.url)
                    
                     
@@ -74,18 +93,37 @@ let app = new Vue ({
                
                     fetch('http://localhost:7000/Backend/register.php', requestOptions)
                       .then(response => response.json())
-                      .then(data => (this.connected = data.connected));
+                      .then(data => (this.connected = true))
+                      .then(data => {
+                          this.connected = data.connected;
+                          window.location = './membres.html';
+                          console.log('succes !');
+                      })
+                      .catch(error => {
+                          console.log('chat a pas marché :( cheh XD')
+                          console.error(error)
+                      });
                 },
-                
+                    
+                  
+
+
+            
               disconnect(ev) {
                 ev.preventDefault(); 
                 fetch('http://localhost:7000/Backend/disconnect.php')
-                this.login = null; 
-                this.password = null; 
-                this.connected = false; 
+                .then(data => ( 
+                this.login = null,
+                this.password = null, 
+                this.connected = false
+                ))
+                .then(data =>{
+                    this.connected = false;
+                    window.location = './index.html';
+                }) 
+                
             }
           
         },
         
 })
-    

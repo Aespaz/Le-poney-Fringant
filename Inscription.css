@@ -236,9 +236,10 @@ body{
     #SeconnecteLink{
         position: relative;
         text-decoration: none;
-        top: 80px;
-        left: 0px;
+        top: 50px;
+        left: -300px;
         padding-bottom: 200px;
+        color: black;
     }
     .listeD{
         position: relative;
@@ -331,5 +332,5 @@ body{
     #buttonSubmit{
         position: relative;
         top: 50px;
-        left: 300px;
+        left: 100px;
     }
