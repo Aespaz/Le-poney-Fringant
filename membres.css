@@ -108,6 +108,10 @@ body{
         top: -1px;
         margin-left: -30px;
     }
+    .RectMembres{
+        position: relative;
+        margin-left: -400px;
+    }
 }
 #logoAPF{
     position: relative;

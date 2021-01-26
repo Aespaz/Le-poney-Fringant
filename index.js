@@ -25,12 +25,15 @@ let app = new Vue ({
         mounted: function () {
             fetch('http://localhost:7000/Backend/connected.php')
                 .then(response => response.json())
-                .then((data) => {this.connected = data.connected; this.email = data.email});
-                
+                .then((data) => {this.connected = data.connected;
+                     this.email = data.email;
+                     this.pseudo = data.pseudo;
+                    });
+
                 document.getElementById('SeconnecterLink').classList.add('hide');
             fetch('http://localhost:7000/Backend/membres.php')
                 .then(response => response.json())
-                .then((data) => {this.poney = data})
+                .then((data) => {this.poney = data});
                
           },
           methods: {
@@ -50,11 +53,13 @@ let app = new Vue ({
 
                   fetch('http://localhost:7000/Backend/Auth.php', requestOptions) 
                     .then(response => response.json())
-                  
-                       .then(data => {
+                    .then(data => {
                         this.connected = data.connected;
-                        window.location = './membres.html';
-                        console.log('succes !'); 
+                        if (this.connected){
+                            window.location = './membres.html';
+                            console.log('succes !'); 
+                        }
+                        
                     })
                     .catch(error => {
                         console.log('chat a pas marché :( cheh XD')

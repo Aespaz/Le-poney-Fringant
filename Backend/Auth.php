@@ -25,7 +25,7 @@ try {
     $statement->bindParam(':email', $mail);
     $statement->execute();
     $resultat = $statement->fetch(PDO::FETCH_ASSOC);//rechercher le mot de passe dans la variable resultat 
-    $pseudoBdd = $resultat['pseudo'];//le formulaire du pseudo est bind de manier a pouvoir identifier la ligne dans le tableau utilisateurs dans la BDD
+    $pseudoBdd = $resultat['pseudo'];//le pseudo est bind de manier a pouvoir identifier la ligne dans le tableau utilisateurs dans la BDD
     $mailBdd = $resultat['email'];//même explication que celui d'en haut
     $passwordBdd = $resultat['password'];
 
@@ -36,7 +36,8 @@ try {
     if(password_verify($password, $passwordBdd)) { //si le mot de passe saisie par l'utilisateur est égale au mot de passe de son addresse mail en basse de donné alors il se connecte
         session_start(); //demarage de la session ^^
        
-        $_SESSION['utilisateurs'] = $mail;        
+        $_SESSION['utilisateurs'] = $mail;
+        $_SESSION['pseudo'] = $pseudoBdd;          
         http_response_code(200);// le code que tout le monde veut avoir ^^  
         echo json_encode(["connected" => true]);//ont est connecter cool XD
     } else {
