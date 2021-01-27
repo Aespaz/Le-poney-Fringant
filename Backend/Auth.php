@@ -34,7 +34,7 @@ try {
         //echo $exception->getMessage();
     }
     if(password_verify($password, $passwordBdd)) { //si le mot de passe saisie par l'utilisateur est égale au mot de passe de son addresse mail en basse de donné alors il se connecte
-        session_start(); //demarage de la session ^^
+        session_start(); 
        
         $_SESSION['utilisateurs'] = $mail;
         $_SESSION['pseudo'] = $pseudoBdd;          
