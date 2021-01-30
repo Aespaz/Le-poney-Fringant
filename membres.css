@@ -213,7 +213,6 @@ body{
         border-radius: 5px;
         background-color: #966200;
         color: white;
-        box-shadow: 30px;
     }
     .RectMembres{
         position: relative;
@@ -253,7 +252,6 @@ body{
         text-align: center;
         border: 1px solid black;
         border-radius: 5px;
-        padding-bottom: -100px;
         bottom: 285px;
         font-size: 20px;
     }
