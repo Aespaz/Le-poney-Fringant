@@ -16,3 +16,6 @@ faire nativement.
 pour l'heure je n'est pas eu le temps de terminer ce projet avant la 
 date de rendu. Malgré tout j'ai énormément pris de l'expèrience et de la 
 méthode.  
+
+voici la maquette
+https://www.figma.com/file/42MOP3jiWgJFWo16qNpCNY/Association-du-Poney-Fringant-maquette?node-id=62%3A0
